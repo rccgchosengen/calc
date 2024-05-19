@@ -1,0 +1,144 @@
+<head>
+
+<title> David's Calculator </title>
+
+</head>
+
+<body>
+<div class="container">
+<form name="calc" id="calc">
+<input id="display" type="text" name="display" readonly>
+<br>
+<input class="button digits" type="button" value="7" onclick="calc.display.value += '7'">
+<input class="button digits" type="button" value="8" onclick="calc.display.value += '8'">
+<input class="button digits" type="button" value="9" onclick="calc.display.value += '9'">
+
+<input class="button mathButtons" type="button" value="+" onclick="calc.display.value += '+'">
+
+<br>
+
+<input class="button digits" type="button" value="4" onclick="calc.display.value += '4'">
+<input class="button digits" type="button" value="5" onclick="calc.display.value += '5'">
+<input class="button digits" type="button" value="6" onclick="calc.display.value += '6'">
+
+<input class="button mathButtons" type="button" value="-" onclick="calc.display.value += '-'">
+
+<br>
+
+<input class="button digits" type="button" value="1" onclick="calc.display.value += '1'">
+<input class="button digits" type="button" value="2" onclick="calc.display.value += '2'">
+<input class="button digits" type="button" value="3" onclick="calc.display.value += '3'">
+
+<input class="button mathButtons" type="button" value="X" onclick="calc.display.value += '*'">
+
+<br>
+
+<input id="clearButton" class="button" type="button" value="C" onclick="calc.display.value = ''">
+<input class="button digits" type="button" value="0" onclick="calc.display.value += '0'">
+<input class="button mathButtons" type="button" value="=" onclick="calc.display.value = eval(calc.display.value)">
+
+<input class="button mathButtons" type="button" value="/" onclick="calc.display.value += '/'">
+</form>
+</div>
+</body>
+
+<style>
+body {
+	background: url(https://www.rccgchosengen.org/wp-content/uploads/2023/11/Final-Chosen-Gen-bg-large-4-e1701141011138.png), url(https://www.rccgchosengen.org/wp-content/uploads/2023/11/canyon_flyover_2560x1440.jpg);
+        background-repeat: no-repeat;
+        background-position: 50% 20%, 0px 0px;
+        background-size: 300px, cover;
+	/*font-family: Tahoma;*/
+}
+
+#calc {
+	width: 200px;
+	padding: 8px 8px 20px 8px; /* around btns */
+	margin: 300px auto 0px auto; /*on canvas */
+	background-color: #ABABAB;
+	border-radius: 4px;
+	border-top: 2px solid #FFF;
+	border-right: 2px solid #FFF;
+	border-bottom: 2px solid #C1C1C1;
+	border-left: 2px solid #C1C1C1;
+	box-shadow: 3px 3px 7px rgba(0, 0, 0, .6), inset 100px 0px 100px rgba(255, 255, 255, .5);
+}
+
+#display {
+	display: block;
+	margin: 15px auto;
+	height: 42px;
+	width: 174px;
+	padding: 0 10px;
+	border-radius: 4px;
+	border-top: 2px solid #C1C1C1;
+	border-right: 2px solid #C1C1C1;
+	border-bottom: 2px solid #FFF;
+	border-left: 2px solid #FFF;
+	background-color: #FFF;
+	box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.57), inset 0px -20px 0.7px rgba(150, 150, 150, .2);
+	font-size: 28px;
+	color: #777;
+	text-align: right;
+	font-weight: 400;
+}
+
+.button {
+	display: inline-block;
+	margin: 2px;
+	width: 42px;
+	height: 42px;
+	font-size: 16px;
+	font-weight: bold;
+	border-radius: 4px;
+}
+
+.digits {
+	color: #181818;
+	text-shadow: 0px 0.5px 0.5px #fff, 0 0 0 #000, 0 0.5px 0.5px #fff;
+	background-color: #EBEBEB;
+	border-top: 2px solid #FFF;
+	border-right: 2px solid #FFF;
+	border-bottom: 2px solid #C1C1C1;
+	border-left: 2px solid #C1C1C1;
+	border-radius: 4px;
+	box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.57), inset 0px -20px 0.7px rgba(150, 150, 150, .2);
+}
+
+.mathButtons {
+	margin: 2px 2px 6px 2px;
+	color: #FFF;
+	text-shadow: 0px 0.5px 0.5px #000000, 0 0 0 #ffffff, 0 0.5px 0.5px #000000;
+	background-color: #434343;
+	border-top: 2px solid #C1C1C1;
+	border-right: 2px solid #C1C1C1;
+	border-bottom: 2px solid #181818;
+	border-left: 2px solid #181818;
+	box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.57), inset 0px -20px 1px rgba(0, 0, 0, 0.4);
+}
+
+#clearButton {
+	color: #FFF;
+	text-shadow: 0px 0.5px 0.5px #ff0000, 0 0 0 #ffffff, 0 0.5px 0.5px #ff0000;
+	background-color: #D20000;
+	border-top: 2px solid #FF8484;
+	border-right: 2px solid #FF8484;
+	border-bottom: 2px solid #800000;
+	border-left: 2px solid #800000;
+	box-shadow: 0px 0px 2px #030303, inset 0px -20px 1px #B00000;
+}
+
+.digits:hover, .mathButtons:hover, #clearButton:hover {
+        background: #ffba75;
+        border-bottom: 2px solid #ae5700;
+        border-left: 2px solid #ae5700;
+        box-shadow: 0px 0px 2px rgba(150, 150, 150, 0.2), inset 0px -20px 0.7px rgba(0, 0, 0, 0.57);
+}
+
+.digits:active, .mathButtons:active, #clearButton:active {
+        background: #ffba75;
+        border-bottom: 2px solid #ae5700;
+        border-left: 2px solid #ae5700;
+        box-shadow: 0px 0px 2px #ff8000;
+}
+</style>
